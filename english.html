@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover USA</title>
+    <link rel="stylesheet" href="english.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<nav class="glass-nav">
+    <div class="nav-content">
+        <a href="languages.html" class="btn-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back Home</span>
+        </a>
+
+        <button id="darkModeToggle" class="btn-icon" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="header-content reveal-text">
+        <span class="badge">Welcome!</span>
+        <h1>American<br>Heritage</h1>
+        <p>Discover the USA’s culture, food, and landmarks from coast to coast.</p>
+        <button onclick="scrollToContent()" class="btn primary">Start Exploring</button>
+    </div>
+</header>
+
+<main id="main-content">
+    <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" onclick="openTab('about', this)">About</button>
+            <button class="tab-btn" onclick="openTab('foods', this)">Cuisine</button>
+            <button class="tab-btn" onclick="openTab('tourist', this)">Travel</button>
+            <button class="tab-btn" onclick="openTab('language', this)">Language</button>
+            <div class="tab-indicator"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="tab-content active" id="about">
+        <div class="split-layout">
+            <div class="text-block reveal">
+                <h2>The Land<br>of Opportunity</h2>
+                <p>The United States stretches from the Atlantic to the Pacific, offering vibrant cities, national parks, and diverse cultures. From New York to California, the USA has something for everyone.</p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="number">50</span>
+                        <span class="label">States</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">331M</span>
+                        <span class="label">Population</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-block reveal delay-100">
+                <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/16/74/cb/87.jpg" alt="Grand Canyon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Foods Section -->
+    <section class="tab-content" id="foods">
+        <h2 class="section-title reveal">American Cuisine</h2>
+        <div class="grid-3">
+            <div class="card food-card reveal">
+                <div class="card-image">
+                    <img src="https://www.allrecipes.com/thmb/UsNtGp9OgIsKw6cPqGQ-CxLmnTE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-72657-best-hamburger-ever-ddmfs-4x3-hero-878e801ab30445988d007461782b3c25.jpg" alt="Burger">
+                    <div class="card-badge">Snack</div>
+                </div>
+                <div class="card-body">
+                    <h3>Burger</h3>
+                    <p>Classic beef burger with cheese, lettuce, tomato, and pickles.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Beef patty</li>
+                            <li>Burger bun</li>
+                            <li>Lettuce, tomato, cheese</li>
+                        </ul>
+                        <p><strong>Method:</strong> Grill patty, assemble with toppings on bun, serve hot.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-100">
+                <div class="card-image">
+                    <img src="https://www.belbrandsfoodservice.com/wp-content/uploads/2018/05/recipe-desktop-merkts-cheesy-hot-dawg.jpg" alt="Hot Dog">
+                    <div class="card-badge">Snack</div>
+                </div>
+                <div class="card-body">
+                    <h3>Hot Dog</h3>
+                    <p>Sausage in a bun, topped with mustard, ketchup, and relish.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Sausage</li>
+                            <li>Bun</li>
+                            <li>Condiments</li>
+                        </ul>
+                        <p><strong>Method:</strong> Grill sausage, place in bun, add condiments, enjoy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-200">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-uRZFJvCiOCWMJL6IrR88hagHY_eTvsLQWg&s  " alt="Apple Pie">
+                    <div class="card-badge">Dessert</div>
+                </div>
+                <div class="card-body">
+                    <h3>Apple Pie</h3>
+                    <p>Sweet pastry filled with spiced apples, the quintessential American dessert.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Apples</li>
+                            <li>Sugar & cinnamon</li>
+                            <li>Pie crust</li>
+                        </ul>
+                        <p><strong>Method:</strong> Fill crust with apples, bake until golden, serve warm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-300">
+    <div class="card-image">
+        <img src="https://www.tasteofhome.com/wp-content/uploads/2025/01/EXPS_TOHD24_277631_ChristineMa_9.jpg" alt="Mac and Cheese">
+        <div class="card-badge">Main</div>
+    </div>
+    <div class="card-body">
+        <h3>Mac and Cheese</h3>
+        <p>Creamy baked pasta with cheddar cheese sauce, an American comfort food classic.</p>
+        <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+        <div class="recipe-dropdown">
+            <h4>Ingredients</h4>
+            <ul>
+                <li>Macaroni</li>
+                <li>Cheddar Cheese</li>
+                <li>Milk & Butter</li>
+            </ul>
+            <p><strong>Method:</strong> Cook pasta, make cheese sauce, combine and bake until golden on top.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card food-card reveal delay-400">
+    <div class="card-image">
+        <img src="https://leitesculinaria.com/wp-content/uploads/2024/04/batter-fried-chicken-1200.jpg" alt="Fried Chicken">
+        <div class="card-badge">Snack/Main</div>
+    </div>
+    <div class="card-body">
+        <h3>Fried Chicken</h3>
+        <p>Crispy golden fried chicken, seasoned and deep-fried to perfection.</p>
+        <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+        <div class="recipe-dropdown">
+            <h4>Ingredients</h4>
+            <ul>
+                <li>Chicken pieces</li>
+                <li>Flour & Seasoning</li>
+                <li>Oil for frying</li>
+            </ul>
+            <p><strong>Method:</strong> Coat chicken with seasoned flour, deep fry until golden and crispy.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card food-card reveal delay-500">
+    <div class="card-image">
+        <img src="https://ichef.bbc.co.uk/ace/standard/1600/food/recipes/new_york_cheesecake_with_44992_16x9.jpg.webp" alt="Cheesecake">
+        <div class="card-badge">Dessert</div>
+    </div>
+    <div class="card-body">
+        <h3>Cheesecake/with Strawberry</h3>
+        <p>Rich, creamy dessert with a buttery crust and strawberry topping, popular in the US.</p>
+        <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+        <div class="recipe-dropdown">
+            <h4>Ingredients</h4>
+            <ul>
+                <li>Cream Cheese</li>
+                <li>Sugar & Eggs</li>
+                <li>Graham Cracker Crust</li>
+            </ul>
+            <p><strong>Method:</strong> Mix cream cheese filling, pour over crust, bake until set, chill before serving.</p>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section class="tab-content" id="tourist">
+        <h2 class="section-title reveal">Iconic Destinations</h2>
+        
+        <div class="destination-card reveal">
+            <div class="dest-content">
+                <h3>Grand Canyon, Arizona</h3>
+                <p>Immense canyon carved by the Colorado River, offering breathtaking views and hiking opportunities.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://buckwildhummertours.com/wp-content/uploads/sites/6808/2021/12/Get-to-Know-the-Grand-Canyon-Secrets-and-the-Hidden-Waterfall.jpg" alt="Grand Canyon">
+            </div>
+        </div>
+
+        <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>New York City</h3>
+                <p>The bustling metropolis famous for landmarks like Times Square, Statue of Liberty, and Broadway.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://earth.org/wp-content/uploads/2022/03/rsz_stockvault-new-york-city-skyline-from-top-of-empire-state-building272769-1200x800.jpg" alt="NYC Skyline">
+            </div>
+        </div>
+
+        <div class="destination-card reveal">
+    <div class="dest-content">
+        <h3>Yellowstone National Park</h3>
+        <p>America’s first national park, famous for geysers, hot springs, wildlife, and vast natural landscapes.</p>
+    </div>
+    <div class="dest-image">
+        <img src="https://img.freepik.com/free-photo/black-sand-basin-yellowstone-national-park-wyoming_181624-38232.jpg?semt=ais_user_personalization&w=740&q=80" alt="Yellowstone National Park">
+    </div>
+</div>
+
+<div class="destination-card reverse reveal">
+    <div class="dest-content">
+        <h3>San Francisco – Golden Gate Bridge</h3>
+        <p>Iconic red suspension bridge connecting San Francisco to Marin County, surrounded by stunning bay views.</p>
+    </div>
+    <div class="dest-image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1280px-GoldenGateBridge-001.jpg" alt="Golden Gate Bridge">
+    </div>
+</div>
+
+<div class="destination-card reveal">
+    <div class="dest-content">
+        <h3>Las Vegas Strip</h3>
+        <p>Vibrant entertainment district filled with casinos, shows, luxury hotels, and nightlife.</p>
+    </div>
+    <div class="dest-image">
+        <img src="https://www.shutterstock.com/shutterstock/videos/3929954903/thumb/1.jpg?ip=x480" alt="Las Vegas Strip">
+    </div>
+</div>
+    </section>
+
+    <!-- Language Section -->
+    <section class="tab-content" id="language">
+        <div class="lang-intro reveal">
+            <h2>American English</h2>
+            <p>Learn basic American English phrases. Tap the cards below to see translations!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA Lingo" style="margin-top: 20px; border-radius: 12px; max-height: 700px; object-fit: cover;">
+        </div>
+
+        <div class="flip-grid">
+            <div class="flip-card-container reveal">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👋</span>
+                        <h3>Hello</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Hello</h3>
+                        <video controls playsinline>
+                            <source src="english_language_hello.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="hello_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-100">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🙏</span>
+                        <h3>Thanks</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Thanks</h3>
+                        <video controls playsinline>
+                            <source src="english_language_thanks.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="thanks_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-200">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🛑</span>
+                        <h3>No</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>No</h3>
+                        <video controls playsinline>
+                            <source src="english_language_no.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="no_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👍</span>
+                        <h3>Yes</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Yes</h3>
+                        <video controls playsinline>
+                            <source src="english_language_yes.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="yes_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🥺</span>
+                        <h3>Please</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Please</h3>
+                        <video controls playsinline>
+                            <source src="english_language_please.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="please_english.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Discover USA © 2026</p>
+</footer>
+
+<script src="english.js"></script>
+</body>
+</html>

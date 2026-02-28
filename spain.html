@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Spain</title>
+    <link rel="stylesheet" href="spain.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+<nav class="glass-nav">
+    <div class="nav-content">
+        <a href="languages.html" class="btn-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back Home</span>
+        </a>
+
+        <button id="darkModeToggle" class="btn-icon" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="header-content reveal-text">
+        <span class="badge">¡Bienvenido a España!</span>
+        <h1>Spanish<br>Heritage</h1>
+        <p>Explore Spain’s vibrant culture, rich history, and delicious cuisine.</p>
+        <button onclick="scrollToContent()" class="btn primary">Start Exploring</button>
+    </div>
+</header>
+
+<main id="main-content">
+    <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" onclick="openTab('about', this)">About</button>
+            <button class="tab-btn" onclick="openTab('foods', this)">Cuisine</button>
+            <button class="tab-btn" onclick="openTab('tourist', this)">Travel</button>
+            <button class="tab-btn" onclick="openTab('language', this)">Language</button>
+            <div class="tab-indicator"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="tab-content active" id="about">
+        <div class="split-layout">
+            <div class="text-block reveal">
+                <h2>Land of<br>Fiesta & Heritage</h2>
+                <p>Spain offers a rich tapestry of history, art, and natural beauty. Wander through historic cities, enjoy sunny Mediterranean beaches, and experience flamenco and tapas in every region.</p>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="number">3k+</span>
+                        <span class="label">Years of History</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">47M</span>
+                        <span class="label">Population</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-block reveal delay-100">
+                <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2015/09/City-of-Malaga.jpg" alt="Spain City">
+            </div>
+        </div>
+    </section>
+
+    <!-- Foods Section -->
+    <section class="tab-content" id="foods">
+        <h2 class="section-title reveal">Spanish Cuisine</h2>
+        <div class="grid-3">
+            <div class="card food-card reveal">
+                <div class="card-image">
+                    <img src="https://www.bunsenburnerbakery.com/wp-content/uploads/2017/02/salmon-paella-square-11-720x720.jpg" alt="Paella">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Paella</h3>
+                    <p>Traditional rice dish with saffron, seafood, and meats.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Rice</li>
+                            <li>Saffron</li>
+                            <li>Seafood & meats</li>
+                        </ul>
+                        <p><strong>Method:</strong> Cook rice with saffron, add seafood and meats. Simmer until done.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-100">
+                <div class="card-image">
+                    <img src="https://www.biggerbolderbaking.com/wp-content/uploads/2015/04/BBB69-Churros-Chocolate-Thumbnail-v.1.jpg" alt="Churros">
+                    <div class="card-badge">Dessert</div>
+                </div>
+                <div class="card-body">
+                    <h3>Churros</h3>
+                    <p>Fried dough pastry coated in sugar, often dipped in chocolate.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Flour</li>
+                            <li>Sugar</li>
+                            <li>Oil</li>
+                        </ul>
+                        <p><strong>Method:</strong> Fry dough in hot oil, coat with sugar, serve with chocolate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal delay-100">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzOQf4ganElCwN5RKtzkjRYlpIMJTLblF0cQ&s" alt="Tortilla Española">
+                    <div class="card-badge">Main</div>
+                </div>
+                <div class="card-body">
+                    <h3>Croquetas</h3>
+                    <p> Creamy, fried béchamel croquettes often filled with jamón, cod, or cheese.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            <li>Filling: Butter, flour, milk, ham or chicken</li>
+                            <li>Coating: Egg, breadcrumbs, oil</li>
+                        </ul>
+                        <p><strong>Method:</strong> Make a thick sauce, mix in meat, shape, coat, and fry until golden.</p>
+                    </div>
+                </div>
+            </div>
+
+        <div class="card food-card reveal delay">
+                <div class="card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Jamon_iberico_de_bellota_2_%28cinco_jotas%29.jpg" alt="Jamón Ibérico">
+                    <div class="card-badge">Snack</div>
+                </div>
+                <div class="card-body">
+                    <h3>Jamón Ibérico:</h3>
+                    <p>Spanish dry-cured ham traditionally served thinly sliced.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                           <li>Jamón Ibérico (thinly sliced)</li>
+                           <li>Crusty bread (optional)</li>
+                           <li>Olive oil (optional)</li>
+                           <li>Tomato (optional)</li>
+                        </ul>
+                        <p><strong>Method:</strong>Arrange thin slices on a plate and serve with bread, tomato, and olive oil at room temperature.
+</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card food-card reveal delay">
+                <div class="card-image">
+                    <img src="https://tastesbetterfromscratch.com/wp-content/uploads/2025/03/Patatas-Bravas25-1.jpg" alt="Patatas Bravas">
+                    <div class="card-badge">Snack</div>
+                </div>
+                <div class="card-body">
+                    <h3>Patatas Bravas</h3>
+                    <p> Fried potato chunks served with a spicy, red salsa brava, a staple tapa in Spain.</p>
+                    <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                    <div class="recipe-dropdown">
+                        <h4>Ingredients</h4>
+                        <ul>
+                           <li>Potatoes: Potatoes, oil, salt</li>
+                           <li>Bravas Sauce: Olive oil, onion, garlic, tomatoes, paprika, chili, salt, sugar</li>
+                        </ul>
+                        <p><strong>Method:</strong>Fry potatoes until golden, make the sauce, and serve potatoes topped with it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card food-card reveal">
+            <div class="card-image">
+                <img src="https://stjamescheese.com/cdn/shop/products/Chorizo_grande.jpg?v=1734029990 alt="Yakitori">
+                <div class="card-badge">Main</div>
+            </div>
+            <div class="card-body">
+                <h3>Chorizo</h3>
+                <p> Spanish pork sausage seasoned with paprika and garlic, fresh or cured.</p>
+                <button class="btn-outline" onclick="toggleRecipe(this)">View Recipe</button>
+                <div class="recipe-dropdown">
+                    <h4>Ingredients</h4>
+                    <ul>
+                        <li>Chorizo</li>
+                        <li>Olive oil</li>
+                        <li>Garlic (Optional)</li>
+                        <li>Paprika (Optional)</li>
+                    </ul>
+                    <p><strong>Method:</strong>Cook chorizo in a pan until browned and serve.</p>
+                </div>
+            </div>
+         </div>
+
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section class="tab-content" id="tourist">
+        <h2 class="section-title reveal">Iconic Destinations</h2>
+        
+        <div class="destination-card reveal">
+            <div class="dest-content">
+                <h3>Sagrada Familia</h3>
+                <p>Gaudí’s masterpiece in Barcelona, an iconic basilica blending gothic and modernist architecture.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://images.adsttc.com/media/images/5254/4190/e8e4/4eff/0200/06cf/large_jpg/sfpassio.jpg?1381253501" alt="Sagrada Familia">
+            </div>
+        </div>
+
+         <div class="destination-card reveal">
+            <div class="dest-content">
+                <h3>Valencia</h3>
+                <p>Famous for the City of Arts and Sciences, La Lonja, and as the birthplace of paella.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://cdn.britannica.com/19/144719-050-9E928F66/Valencia-Spain.jpg" alt="Valencia">
+            </div>
+        </div>
+
+        <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>Seville (Andalusia)</h3>
+                <p>Known for its Alcázar palace, Cathedral, and passionate flamenco dancing.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Sevilla_Cathedral_-_Southeast.jpg/330px-Sevilla_Cathedral_-_Southeast.jpg" alt="Seville (Andalusia)">
+            </div>
+        </div>
+
+         <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>Madrid (Central)</h3>
+                <p>The capital city, featuring the Royal Palace, Prado Museum, and Retiro Park.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Madrid_-_Sky_Bar_360%C2%BA_%28Hotel_Riu_Plaza_Espa%C3%B1a%29%2C_vistas_19.jpg/330px-Madrid_-_Sky_Bar_360%C2%BA_%28Hotel_Riu_Plaza_Espa%C3%B1a%29%2C_vistas_19.jpg" alt="Madrid">
+            </div>
+        </div>
+
+         <div class="destination-card reverse reveal">
+            <div class="dest-content">
+                <h3>Barcelona</h3>
+                <p> Renowned for Gaudi’s architecture, including Sagrada Família, Park Güell, and vibrant city life.</p>
+            </div>
+            <div class="dest-image">
+                <img src="https://barcelonalocalexperiences.com/wp-content/uploads/2024/12/photo-1590655473571-742fd3b29b78-scaled-1.jpg" alt="Barcelona">
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Section -->
+    <section class="tab-content" id="language">
+        <div class="lang-intro reveal">
+            <h2>Spanish Phrases</h2>
+            <p>Learn basic Spanish phrases. Click the cards below to see translations!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Spanish Lingo" style="margin-top: 20px; border-radius: 12px; max-height: 700px; object-fit: cover;">
+        </div>
+
+        <div class="flip-grid">
+            <div class="flip-card-container reveal">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👋</span>
+                        <h3>Hola</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Hello</h3>
+                        <video controls playsinline>
+                            <source src="es_hello.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="es_hello.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-100">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🙏</span>
+                        <h3>Gracias</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Thanks</h3>
+                        <video controls playsinline>
+                            <source src="es_thanks.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="es_thanks.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-200">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🛑</span>
+                        <h3>No</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>No</h3>
+                        <video controls playsinline>
+                            <source src="es_no.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="es_no.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">👍</span>
+                        <h3>Sí</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Yes</h3>
+                        <video controls playsinline>
+                            <source src="es_yes.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="es_yes.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card-container reveal delay-300">
+                <div class="flip-card">
+                    <div class="card-front">
+                        <span class="icon">🥺</span>
+                        <h3>Por favor</h3>
+                        <p class="hint">(Tap to flip)</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Please</h3>
+                        <video controls playsinline>
+                            <source src="es_please.mp4" type="video/mp4">
+                        </video>
+                        <button class="play-audio-btn" data-audio="es_please.mp3">🔊 Play Audio</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Discover Spain © 2026</p>
+</footer>
+
+<script src="spain.js"></script>
+</body>
+</html>
